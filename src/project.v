@@ -26,7 +26,7 @@ module mux21_bmsce (
     assign in2 = ui_in [2];
     
 
-    assign y = sel? in1:in0;
+    assign y = sel? in2:in1;
 
     
     assign y = uo_out[0];
