@@ -5,7 +5,7 @@
 
 `default_nettype none
 
-module tt_um_example (
+module mux21_bmsce (
     input  wire [7:0] ui_in,    // Dedicated inputs
     output wire [7:0] uo_out,   // Dedicated outputs
     input  wire [7:0] uio_in,   // IOs: Input path
@@ -21,7 +21,19 @@ module tt_um_example (
   assign uio_out = 0;
   assign uio_oe  = 0;
 
+    assign sel = ui_in [0];
+    assign in1 = ui_in [1];
+    assign in2 = ui_in [2];
+    
+
+    assign y = sel? in1:in0;
+
+    
+    assign y = uo_out[0];
+    assign uo_out[7:1] = 7'b0;
+    assign uio_out = 8'b0;
+
   // List all unused inputs to prevent warnings
-  wire _unused = &{ena, clk, rst_n, 1'b0};
+    wire _unused = &{ena, clk, rst_n, 1'b0, uo_in[7:1]};
 
 endmodule
