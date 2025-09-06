@@ -28,6 +28,6 @@ module tt_um_mux21_bmsce (
     assign uio_out = 8'b0;
 
   // List all unused inputs to prevent warnings
-    wire _unused = &{ena, clk, rst_n, 1'b0, uo_in[7:1]};
+    wire _unused = &{ena, clk, rst_n, 1'b0, uo_out[7:1]};
 
 endmodule
