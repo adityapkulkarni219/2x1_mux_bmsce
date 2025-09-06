@@ -1,6 +1,6 @@
 # Tiny Tapeout project information
 project:
-  title:        "Mux21_bmsce"      # Project title
+  title:        "mux21_bmsce"      # Project title
   author:       "Aditya"      # Your name
   discord:      ""      # Your discord username, for communication and automatically assigning you a Tapeout role (optional)
   description:  ""      # One line description of what your project does
